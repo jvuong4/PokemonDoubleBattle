@@ -282,11 +282,11 @@ public class PokemonRunner
          else if(Math.random() < 0.25 && (computerRoster.get(0).battling && computerRoster.get(0).defmod < 6) || (computerRoster.get(1).battling && computerRoster.get(1).defmod < 6) )
             poke.use(2,computerRoster,playerRoster);
          //if a target is at <50% hp and does not resist water
-         else if(playerRoster.get(0).hp < playerRoster.get(0).maxhp / 2 && !(playerRoster.get(0).contains(playerRoster.get(0).resistance,"Water")))
+         else if(playerRoster.get(0).battling && playerRoster.get(0).hp < playerRoster.get(0).maxhp / 2 && !(playerRoster.get(0).contains(playerRoster.get(0).resistance,"Water")))
          {
             poke.attack(playerRoster.get(0), 3);
          }
-         else if(playerRoster.get(1).hp < playerRoster.get(1).maxhp / 2 && !(playerRoster.get(1).contains(playerRoster.get(1).resistance,"Water")))
+         else if(playerRoster.get(1).battling && playerRoster.get(1).hp < playerRoster.get(1).maxhp / 2 && !(playerRoster.get(1).contains(playerRoster.get(1).resistance,"Water")))
          {
             poke.attack(playerRoster.get(1), 3);
          }
@@ -296,11 +296,11 @@ public class PokemonRunner
             poke.use(0,computerRoster,playerRoster);
          }
          //if a target is at <50% hp OR does not resist water
-         else if(playerRoster.get(0).hp < playerRoster.get(0).maxhp / 2 && !(playerRoster.get(0).contains(playerRoster.get(0).resistance,"Water")))
+         else if(playerRoster.get(0).battling && playerRoster.get(0).hp < playerRoster.get(0).maxhp / 2 && !(playerRoster.get(0).contains(playerRoster.get(0).resistance,"Water")))
          {
             poke.attack(playerRoster.get(0), 3);
          }
-         else if(playerRoster.get(1).hp < playerRoster.get(1).maxhp / 2 && !(playerRoster.get(1).contains(playerRoster.get(1).resistance,"Water")))
+         else if(playerRoster.get(1).battling && playerRoster.get(1).hp < playerRoster.get(1).maxhp / 2 && !(playerRoster.get(1).contains(playerRoster.get(1).resistance,"Water")))
          {
             poke.attack(playerRoster.get(1), 3);
          }
